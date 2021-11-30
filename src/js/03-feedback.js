@@ -30,10 +30,12 @@ function currentMsg(p1, p2) {
     const savedMsg = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
     if (savedMsg && savedMsg.email) {
+        feedBack[p1.name] = savedMsg.email;
         p1.value = savedMsg.email;
     };
 
     if (savedMsg && savedMsg.message) {
+        feedBack[p2.name] = savedMsg.message;
         p2.value = savedMsg.message;
     };
 }
